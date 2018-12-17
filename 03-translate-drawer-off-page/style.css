@@ -1,0 +1,108 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: helvetica;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.nav-bar {
+    /*the first argument is the horizontal offset then vertical offset then the blur and finally the color*/
+    background-color: skyblue;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+    display: flex;
+    height: 2em;
+    margin: 0;
+    padding: 0.5em;
+    width: 100%;
+    z-index: 10;
+}
+
+.nav-bar__links {
+    width: 33.33%;
+    margin-left: auto;
+    text-align: center;
+}
+
+.title {
+    width: 100%;
+    text-align: center;
+}
+
+.container {
+    position: relative;
+    /* The drawer is Relative to this element.. this is very significant*/
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+}
+
+.sponge {
+    width: 25%;
+    height: auto;
+    box-shadow: -1px 1px 2px grey;
+    margin: 1em;
+    display: flex;
+    justify-content: center;
+}
+
+.sponge__img {
+    width: 100%;
+    height: 300px;
+    border: 0.5px solid black;
+}
+
+/*APP DRAWER CSS*/
+
+.app_drawer {
+    /* Get the drawer on the page */
+    width: 20%;
+    height: auto;
+    background: lightblue;
+
+    /* Position the drawer on the left  (absolute takes the element out of the flow of the page*/
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-height: 100%;
+
+    /* Give drawer second highest index */
+    z-index: 1;
+
+    /* Now get the drawer off the page to start */
+    transform: translateX(-100%);
+}
+
+.app_drawer__title {
+    margin: 0.5em;
+}
+
+.app_drawer__button {
+    /* Get the button on the page  */
+    width: 5em;
+    height: 5em;
+    background: skyblue;
+
+    /* Make it into a circle and give it a border */
+    border-radius: 50%;
+    border: 12px solid midnightblue;
+
+    /* Position it in the top left corner / and give it the highest z-index in the code*/
+    position: absolute;
+    top: 3%;
+    left: 3em;
+    z-index: 2;
+}
+
+.app_drawer__visible {}
+
+.app_drawer__button__visible {}
